@@ -4,45 +4,46 @@
   height: 50vh;
   justify-content: center;
   align-items: center;
-  perspective: 1000px;
-  background: #f6f7fc;
 }
 
-.card{
+.card {
+  border: none;
   position: relative;
   width: 8rem;
   height: 8rem;
   margin: 0.5rem;
+  background-color: transparent;
   text-align: center;
   line-height: 8rem;
   color: #ecf0f1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border-radius: 0.8rem;
-  transform-style: preserve-3d;
+  perspective: 1000px;
 
 }
-
-.face{
-  display: block;
-  position: absolute;
-  top: 0cm;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.8rem;
+.card-content {
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, .5);
+  transition: all 2s;
+  
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   background-size: cover;
-  background-position:  center center;
-  transition:  transform 0.5s ease-in-out;
- 
+  background-position: center center;
+  border-radius: 0.8rem;
 }
 
-.face--front{
+
+
+.face--front {
   background: #2c3e50;
-  font-size: 3rem;
+  font-size: 1.5rem;
 
 }
 
-.face--back{
+.face--back {
   background: #2c3e50;
   font-size: 1.5rem;
   transform: rotateX(180deg);
@@ -50,28 +51,32 @@
 
 }
 
-.card:hover .face--front{
-  transform: rotateX(-180deg);
+.face--back{
+  transform:rotateY(180deg);
 }
 
-.card:hover .face--back{
-  transform: rotateX(0deg);
+.card:hover .face--front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .face--back {
+  transform: rotateY(0);
 }
 
 
-body{
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
+body {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
 }
 
-button{
-    margin-right: 10px;
+button {
+  margin-right: 10px;
 }
 
-.btn{
-    background-color: rgb(99, 4, 23);
-    color: aliceblue;
-  
+.btn {
+  background-color: rgb(99, 4, 23);
+  color: aliceblue;
+
 }
 
 /*.btn-bd-primary {
@@ -88,4 +93,3 @@ button{
     --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
     --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
   }*/
-
