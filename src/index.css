@@ -46,14 +46,11 @@
 .face--back {
   background: #2c3e50;
   font-size: 1.5rem;
-  transform: rotateX(180deg);
-
-
-}
-
-.face--back{
   transform:rotateY(180deg);
+
 }
+
+
 
 .card:hover .face--front {
   transform: rotateY(-180deg);
@@ -64,9 +61,10 @@
 }
 
 
+
 body {
   padding: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(230, 230, 230);
 }
 
 button {
