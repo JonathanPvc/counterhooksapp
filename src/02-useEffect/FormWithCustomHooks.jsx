@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Bontones } from "../00Prueba/Bontones";
+
 import { useForm } from "../hooks/useForm";
 
 
@@ -47,10 +49,12 @@ export const FormWithCustomHooks = () => {
         onChange={onInputChange}
       />
 
-
      
+     <Bontones />
 
     </>
+
+  
   )
 }
 
